@@ -41,6 +41,12 @@ L.imageOverlay(
 
 map.fitBounds(bounds);
 map.setMaxBounds(bounds);
+  L.marker([500,500])
+.addTo(map)
+.bindPopup(`
+<h2>Capital City</h2>
+<p>The heart of the kingdom.</p>
+`);
   
 </script>
 
