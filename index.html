@@ -41,9 +41,30 @@ L.imageOverlay(
 
 map.fitBounds(bounds);
 map.setMaxBounds(bounds);
-map.on('click', function(e) {
-  alert(e.latlng);
-});
+L.marker([435,551])
+.addTo(map)
+.bindPopup(`
+<h2>Principality of Jookroo</h2>
+<p>NetJJ Son.</p>
+`);
+L.marker([476,935])
+.addTo(map)
+.bindPopup(`
+<h2>Kingdom of JJ</h2>
+<p>Grumpy cat.</p>
+`);
+L.marker([308,1291])
+.addTo(map)
+.bindPopup(`
+<h2>Kingdom of Net</h2>
+<p>Owner of the grumpy cat.</p>
+`);
+L.marker([653,709])
+.addTo(map)
+.bindPopup(`
+<h2>Domundi Empire</h2>
+<p>The heart of the Universe.</p>
+`);
   
 </script>
 
