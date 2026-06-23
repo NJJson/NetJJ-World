@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<style>
+#map{
+height:100vh;
+}
+</style>
+</head>
+
+<body>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+
+var map = L.map('map', {
+crs: L.CRS.Simple
+});
+
+var bounds = [[0,0],[1000,1000]];
+
+L.imageOverlay(
+'worldmap.png',
+bounds
+).addTo(map);
+
+map.fitBounds(bounds);
+
+L.marker([300,400])
+.addTo(map)
+.bindPopup("North Kingdom");
+
+</script>
+
+</body>
+</html>
